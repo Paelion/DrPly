@@ -7,7 +7,7 @@
 
 <body>
     <?php
-        $retour = mail('pauline.aelion@edu.devinci;fr', 'Envoi depuis la page Contact', 'test');
+        $retour = mail('pauline.aelion@edu.devinci.fr', 'Envoi depuis la page Contact', 'test');
         if ($retour) {
             echo '<p>Votre message a bien été envoyé.</p>';
         }
