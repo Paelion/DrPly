@@ -57,7 +57,7 @@
     <div class="form">
         <div class="form-wrapper">
             <h2>Ton avis nous intéresse !</h2>
-            <form method="post" class="form-example">
+            <form method="post" action="mail.php" class="form-example">
                 <div class="form-example">
                     <input type="text" name="name" id="name" required placeholder="Ton nom:">
                 </div>
@@ -74,20 +74,6 @@
                     <input type="submit" value="Envoyer">
                 </div>
             </form>
-            <?php
-                if (isset($_POST['message'])) {
-                    $position_arobase = strpos($_POST['email'], '@');
-                    if ($position_arobase === false)
-                        echo '<p>Votre email doit comporter un arobase.</p>';
-                    else {
-                        $retour = mail('pauline.aelion@edu.devinci.fr', 'Envoi depuis la page Contact', $_POST['message'], 'From: ' . $_POST['email']);
-                        if($retour)
-                            echo '<p>Votre message a été envoyé.</p>';
-                        else
-                            echo '<p>Erreur.</p>';
-                    }
-                }
-            ?>
         </div>
     </div>
     <footer>
@@ -97,7 +83,6 @@
 </div>
 </body>
 </html>
-
 
 
 
