@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <title>Dr Ply</title>
+</head>
+<body>
+<img class="img_bc" src="assets/background.png" alt="">
+<div class="content">
+    <nav>
+        <img class="logo" src="assets/logo.png" alt="">
+        <ul>
+            <li><a href="">Votre assistant</a></li>
+            <li><a href="">Et aussi...</a></li>
+            <li><a href="">Votre avis</a></li>
+        </ul>
+    </nav>
+
+    <div class="drply">
+        <div class="drply-content">
+            <h2>Dr Ply : à l'écoute de tes maux du quotidien</h2>
+            <p class="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum debitis, deleniti dignissimos dolores enim illum minus natus, non nostrum perferendis qui quo quos repellendus sunt, tempora. Consectetur dolor pariatur repellendus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum debitis, deleniti dignissimos dolores enim illum minus natus, non nostrum perferendis qui quo quos repellendus sunt, tempora. Consectetur dolor pariatur repellendus.</p>
+            <p class="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum debitis, deleniti dignissimos dolores enim illum minus natus, non nostrum perferendis qui quo quos repellendus sunt, tempora. Consectetur dolor pariatur repellendus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum debitis, deleniti dignissimos dolores enim illum minus natus, non nostrum perferendis qui quo quos repellendus sunt, tempora. Consectetur dolor pariatur repellendus.</p>
+            <button>Télécharger l'appli</button>
+        </div>
+        <img class="mascotte" src="assets/Dr_ply_2.png" alt="">
+    </div>
+    <div class="more">
+        <div>
+            <h2>Et tout ça à l'interieur !</h2>
+            <ul>
+                <li>
+                    <img class="plus" src="assets/plus.svg" alt="">
+                    <span>Des conseils adaptés</span>
+                </li>
+                <li>
+                    <img class="plus" src="assets/plus.svg" alt="">
+                    <span>Un suivi quotidien</span>
+                </li>
+                <li>
+                    <img class="plus" src="assets/plus.svg" alt="">
+                    <span>Des produits approués par des spécialistes</span>
+                </li>
+                <li>
+                    <img class="plus" src="assets/plus.svg" alt="">
+                    <span>Un lien direct avec des professionels</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="compteur">
+        <label id="Compte">
+        </label>
+    </div>
+    <div class="form">
+        <div class="form-wrapper">
+            <h2>Ton avis nous intéresse !</h2>
+            <form method="post" action="mail.php" class="form-example">
+                <div class="form-example">
+                    <input type="text" name="name" id="name" required placeholder="Ton nom:">
+                </div>
+                <div class="form-example">
+                    <input type="email" name="email" id="email" required placeholder="Ton email:">
+                </div>
+                <div class="form-example">
+                    <input type="text" name="age" id="age" required placeholder="Ton âge:">
+                </div>
+                <div class="form-example">
+                    <textarea name="email" id="message" required placeholder="Ton avis:"></textarea>
+                </div>
+                <div class="form-example send">
+                    <input type="submit" value="Envoyer">
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>TOUS DROITS RESERVES . SEED . 2020</p>
+        <p>POLITIQUE DE CONFIDENTIALITE</p>
+    </footer>
+</div>
+</body>
+</html>
+
+
+
+<script type="text/javascript">
+    var Affiche = document.getElementById("Compte");
+    function Rebour() {
+        var date1 = new Date();
+        var date2 = new Date ("Oct 16, 2020 00:00:00");
+        var sec = (date2 - date1) / 1000;
+        var n = 24 * 3600;
+        if (sec > 0) {
+            j = Math.floor (sec / n);
+            h = Math.floor ((sec - (j * n)) / 3600);
+            mn = Math.floor ((sec - ((j * n + h * 3600))) / 60);
+            sec = Math.floor (sec - ((j * n + h * 3600 + mn * 60)));
+            Affiche.innerHTML = "Lancement de Dr Ply : " + j +" j "+ h +" h "+ mn +" min "+ sec + " s";
+            window.status = "Temps restant : " + j +" j "+ h +" h "+ mn +" min "+ sec + " s ";
+        }
+        tRebour=setTimeout ("Rebour();", 1000);
+    }
+    Rebour();
+</script>
