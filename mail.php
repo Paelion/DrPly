@@ -6,11 +6,11 @@
 </head>
 
 <body>
-<?php
-$retour = mail('pauline.aelion@edu.devinci.fr', 'Envoi depuis la page Contact', $_POST['nom'], $_POST['age'], $_POST['email'] );
-if ($retour) {
-    echo '<p>Votre message a bien été envoyé.</p>';
-}
-?>
+    <?php
+        $retour = mail('pauline.aelion@edu.devinci;fr', 'Envoi depuis la page Contact', 'test');
+        if ($retour) {
+            echo '<p>Votre message a bien été envoyé.</p>';
+        }
+    ?>
 </body>
 </html>
